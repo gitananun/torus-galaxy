@@ -1,4 +1,4 @@
-# Torus Galaxy 🤩
+# Torus Galaxy 🌍 🌑 🪐 ✨
 [![dependency - imagination](https://img.shields.io/badge/dependency-imagination-blue)](https://www.npmjs.com/package/imagination)
 [![dependency - better-earth](https://img.shields.io/badge/dependency-better--earth-6cc644)](https://www.npmjs.com/package/better-earth)
 [![dependency - JS](https://img.shields.io/badge/dependency-JS-brightgreen?logo=javascript&logoColor=white)](https://www.npmjs.com/package/JS)

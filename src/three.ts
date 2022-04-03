@@ -32,27 +32,55 @@ pointLight.position.set(0, 0, 0);
 scene.add(pointLight, ambientLight);
 
 const toruses = [
-  mercuryTorus,
-  marsTorus,
-  venusTorus,
-  earthTorus,
-  neptuneTorus,
-  uranusTorus,
-  saturnTorus,
-  jupyterTorus,
-  sunTorus,
+  {
+    torus: jupyterTorus,
+    speed: 0.012,
+  },
+  {
+    torus: saturnTorus,
+    speed: 0.01,
+  },
+  {
+    torus: neptuneTorus,
+    speed: 0.002,
+  },
+  {
+    torus: marsTorus,
+    speed: 0.004,
+  },
+  {
+    torus: mercuryTorus,
+    speed: 0.002,
+  },
+  {
+    torus: earthTorus,
+    speed: 0.006,
+  },
+  {
+    torus: venusTorus,
+    speed: 0.001,
+  },
+  {
+    torus: uranusTorus,
+    speed: 0.008,
+  },
+  {
+    torus: sunTorus,
+    speed: 0.014,
+  },
 ];
 
 generateStars(scene, 2000);
-scene.add(...toruses);
+
+scene.add(...toruses.map((torus) => torus.torus));
 
 const animate = () => {
   requestAnimationFrame(animate);
 
-  toruses.forEach((torus) => {
-    torus.rotation.x += 0.001;
-    torus.rotation.y += 0.005;
-    torus.rotation.z += 0.001;
+  toruses.forEach((map) => {
+    map.torus.rotation.x += map.speed;
+    map.torus.rotation.y += map.speed;
+    map.torus.rotation.z += map.speed;
   });
 
   controls.update();
